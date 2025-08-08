@@ -34,7 +34,7 @@ function Signup() {
         }
 
         try {
-            const url = 'https://mernlogin-9cvy.onrender.com/auth/signup';
+            const url = 'https://mernlogin-9cvy.onrender.com';
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
