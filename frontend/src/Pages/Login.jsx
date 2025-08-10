@@ -1,4 +1,4 @@
-// signup.jsx
+// login.jsx
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -33,7 +33,7 @@ function Login() {
         }
 
         try {
-            const url = 'https://mernlogin-9cvy.onrender.com';
+            const url = 'https://mernlogin-9cvy.onrender.com/auth/login';
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
