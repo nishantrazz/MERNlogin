@@ -33,15 +33,23 @@ function Login() {
         }
 
         try {
-            const url = 'https://mernlogin-9cvy.onrender.com/auth/login';
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+            // const url = 'https://mernlogin-9cvy.onrender.com/auth/login';
+            // const response = await fetch(url, {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
 
-                body: JSON.stringify(loginInfo)
-            });
+            //     body: JSON.stringify(loginInfo)
+            // });
+            fetch("https://mernlogin-9cvy.onrender.com/login", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email, password })
+            })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.error(err));
             const data = await response.json();
             if (!response.ok) {
                 throw new Error(data.message || 'Login Failed');
