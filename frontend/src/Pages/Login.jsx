@@ -42,7 +42,7 @@ function Login() {
 
             //     body: JSON.stringify(loginInfo)
             // });
-            fetch("https://mernlogin-9cvy.onrender.com/login", {
+            fetch("https://mernlogin-9cvy.onrender.com/auth/login", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ email, password })
