@@ -24,67 +24,7 @@ function Login() {
         console.log('Login Info', copyloginInfo);
     };
 
-    // const handleLogin = async (e) => {
-    //     e.preventDefault();
-
-    //     const { email, password } = loginInfo;
-    //     if (!email || !password) {
-    //         return handleError('Please Enter Both Email and Password');
-    //     }
-
-    //     try {
-    //         // const url = 'https://mernlogin-9cvy.onrender.com/auth/login';
-    //         // const response = await fetch(url, {
-    //         //     method: 'POST',
-    //         //     headers: {
-    //         //         'Content-Type': 'application/json',
-    //         //     },
-
-    //         //     body: JSON.stringify(loginInfo)
-    //         // });
-    //         fetch("https://mernlogin-9cvy.onrender.com/auth/login", {
-    //           method: "POST",
-    //           headers: { "Content-Type": "application/json" },
-    //           body: JSON.stringify({ email, password })
-    //         })
-    //         .then(res => res.json())
-    //         .then(data => console.log(data))
-    //         .catch(err => console.error(err));
-    //         const data = await response.json();
-    //         if (!response.ok) {
-    //             throw new Error(data.message || 'Login Failed');
-    //         }
-    //         const { success, message, jwtToken, name, error } = data;
-    //         if (success) {
-    //             handleSuccess(message);
-    //             // localStorage.setItem('jwtToken', jwtToken);
-    //             // localStorage.setItem('name', name);
-    //             localStorage.setItem('token', jwtToken);
-    //             localStorage.setItem('loggedInUser', name);
-    //             setTimeout(() => {
-    //                 navigate('/index');
-    //             }, 1000);
-    //         }
-    //         else if (error) {
-    //             const details = error?.details[0] || 'Login Failed';
-    //             handleError(details);
-    //         }
-    //         // else if (error) {
-    //         //     const details = typeof error === 'object' ? error?.details?.[0]?.message : error;
-    //         //     handleError(details || "Unknown error occurred");
-    //         // }
-    //         else if (!success) {
-    //             handleError(message || 'Invalid Credentails');
-    //         }
-    //         if (!response.ok) {
-    //             throw new Error(data.message || 'Login Request Failed');
-    //         }
-    //     } catch (err) {
-    //         handleError(err.message || ' Something went wrong')
-    //     }
-    // };
-
-    const handleLogin = async (e) => {
+   const handleLogin = async (e) => {
   e.preventDefault();
 
   const { email, password } = loginInfo;
@@ -124,6 +64,7 @@ function Login() {
     handleError(err.message || 'Something went wrong');
   }
 };
+
 
     const [showpassword, setShowpassword] = useState(false);
 
